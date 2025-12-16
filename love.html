@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love — One Piece Mood</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="love page">
+  <header class="page-header">
+    <div class="header-left">
+      <h1>Warm hearts — Shiva’s charm</h1>
+      <span class="mood-chip">😍 Love</span>
+    </div>
+    <div class="controls">
+      <button id="audioToggle" class="icon-btn">🔇 Audio: Off</button>
+      <button id="themeToggle" class="icon-btn">☀️ Light mode</button>
+      <a class="back-link" href="index.html">← Back</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <article class="mood-card">
+      <div class="mood-images">
+        <img src="assets/images/love-sanji.jpg" alt="Love wallpaper 1" class="mood-image">
+        <img src="assets/images/love-hancock.jpg" alt="Love wallpaper 2" class="mood-image">
+      </div>
+      <div class="mood-meta">
+        <h2>Love makes the journey sweet</h2>
+        <p>Lead with kindness. Share warmth, keep the flame steady.</p>
+      </div>
+    </article>
+
+    <aside class="advice-box" id="adviceBox"></aside>
+  </main>
+
+  <footer class="page-footer">Mood Companion — Love</footer>
+
+  <script src="script.js"></script>
+  <script>
+    initPage({ mood: "love" });
+  </script>
+</body>
+</html>

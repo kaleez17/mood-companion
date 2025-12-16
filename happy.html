@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy — One Piece Mood</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="happy page">
+  <header class="page-header">
+    <div class="header-left">
+      <h1>Happy seas — Luffy’s laughter</h1>
+      <span class="mood-chip">😊 Happy</span>
+    </div>
+    <div class="controls">
+      <button id="audioToggle" class="icon-btn">🔇 Audio: Off</button>
+      <button id="themeToggle" class="icon-btn">☀️ Light mode</button>
+      <a class="back-link" href="index.html">← Back</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <article class="mood-card">
+      <div class="mood-images">
+        <img src="assets/images/happy-luffy.jpg" alt="Happy wallpaper 1" class="mood-image">
+        <img src="assets/images/happy-crew.jpg" alt="Happy wallpaper 2" class="mood-image">
+      </div>
+      <div class="mood-meta">
+        <h2>Joy feels like wind in your sails</h2>
+        <p>Celebrate small wins. Let your crew feel the sunshine.</p>
+      </div>
+    </article>
+
+    <aside class="advice-box" id="adviceBox"></aside>
+  </main>
+
+  <footer class="page-footer"> Mood Companion — Happy</footer>
+
+  <script src="script.js"></script>
+  <script>
+    initPage({ mood: "happy" });
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Mood Companion</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="home">
+  <div class="container">
+    <h1 class="title">Choose your mood, set your sail</h1>
+    <p class="subtitle">Emotion‑adaptive pages with One Piece themes, audio, dark mode, and polish.</p>
+
+    <div class="mood-grid">
+      <a class="mood-link mood-happy" href="happy.html"><span class="emoji">😊</span> Happy</a>
+      <a class="mood-link mood-sad" href="sad.html"><span class="emoji">😢</span> Sad</a>
+      <a class="mood-link mood-angry" href="angry.html"><span class="emoji">😡</span> Angry</a>
+      <a class="mood-link mood-love" href="love.html"><span class="emoji">😍</span> Love</a>
+    </div>
+  </div>
+
+  <div class="preloader"><div class="loader"></div></div>
+  <script>
+    // Basic preloader on home
+    window.addEventListener("load", () => {
+      const pre = document.querySelector(".preloader");
+      if (pre) { pre.style.opacity = "0"; setTimeout(()=>pre.remove(), 200); }
+    });
+    document.querySelectorAll('a[href]').forEach(a=>{
+      a.addEventListener('click',(e)=>{
+        const href=a.getAttribute('href'); if(!href) return;
+        const pre=document.createElement('div'); pre.className='preloader'; pre.innerHTML='<div class="loader"></div>';
+        document.body.appendChild(pre); setTimeout(()=>{ window.location.href=href; },150); e.preventDefault();
+      });
+    });
+  </script>
+  <footer class="home-footer">
+  <p>Made with ❤️ by Kaleeswaran</p>
+  <p>
+    <a href="contact.html" class="contact-link">📬 Contact the Author</a>
+  </p>
+</footer>
+</body>
+</html>

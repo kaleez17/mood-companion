@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sad — One Piece Mood</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="sad page">
+  <header class="page-header">
+    <div class="header-left">
+      <h1>Quiet waters — Robin’s resilience</h1>
+      <span class="mood-chip">😢 Sad</span>
+    </div>
+    <div class="controls">
+      <button id="audioToggle" class="icon-btn">🔇 Audio: Off</button>
+      <button id="themeToggle" class="icon-btn">☀️ Light mode</button>
+      <a class="back-link" href="index.html">← Back</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <article class="mood-card">
+      <div class="mood-images">
+        <img src="assets/images/sad-nami.jpg" alt="Sad wallpaper 1" class="mood-image">
+        <img src="assets/images/sad-robin.jpg" alt="Sad wallpaper 2" class="mood-image">
+      </div>
+      <div class="mood-meta">
+        <h2>Storms pass; the voyage continues</h2>
+        <p>Rest, reflect, and remember: tomorrow’s horizon is wide.</p>
+      </div>
+    </article>
+
+    <aside class="advice-box" id="adviceBox"></aside>
+  </main>
+
+  <footer class="page-footer">Mood Companion — Sad</footer>
+
+  <script src="script.js"></script>
+  <script>
+    initPage({ mood: "sad" });
+  </script>
+</body>
+</html>
