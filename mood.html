@@ -27,7 +27,7 @@
 
   <!-- Script -->
  <script>
-  // Remove preloader on fresh load
+  // Basic preloader on home
   window.addEventListener("load", () => {
     const pre = document.querySelector(".preloader");
     if (pre) { 
@@ -36,14 +36,26 @@
     }
   });
 
-  // Remove preloader when coming back from cache
-  window.addEventListener("pageshow", (event) => {
+  // Fix for back/forward navigation
+  window.addEventListener("pageshow", () => {
     const pre = document.querySelector(".preloader");
-    if (pre) {
-      if (event.persisted) {
-        pre.style.display = "none";
-      }
+    if (pre) { 
+      pre.style.display = "none"; 
     }
+  });
+
+  // Navigation click handler
+  document.querySelectorAll('a[href]').forEach(a=>{
+    a.addEventListener('click',(e)=>{
+      const href=a.getAttribute('href'); 
+      if(!href) return;
+      const pre=document.createElement('div'); 
+      pre.className='preloader'; 
+      pre.innerHTML='<div class="loader"></div>';
+      document.body.appendChild(pre); 
+      setTimeout(()=>{ window.location.href=href; },150); 
+      e.preventDefault();
+    });
   });
 </script>
   
