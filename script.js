@@ -224,4 +224,12 @@ function initPage({ mood }) {
       e.preventDefault();
     });
   });
+  // Fix for back navigation stuck preloader
+window.addEventListener("pageshow", () => {
+  const preloader = document.querySelector(".preloader");
+  if (preloader) {
+    preloader.style.display = "none";
+  }
+});
+
 }
