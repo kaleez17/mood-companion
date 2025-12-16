@@ -26,5 +26,21 @@
   <footer class="page-footer">
     <a href="index.html" class="back-link">← Back to Home</a>
   </footer>
+  <script>
+  // Preloader fix for mood page
+  window.addEventListener("load", () => {
+    const pre = document.querySelector(".preloader");
+    if (pre) { 
+      pre.style.opacity = "0"; 
+      setTimeout(()=>pre.remove(), 200); 
+    }
+  });
+
+  // Handle back/forward navigation (so preloader hides properly)
+  window.addEventListener("pageshow", () => {
+    const pre = document.querySelector(".preloader");
+    if (pre) { pre.style.display = "none"; }
+  });
+</script>
 </body>
 </html>
